@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя страница ВК</title>
+    <style>
+        /* Это стили, чтобы сайт стал сине-серым, как ВК */
+        body { background-color: #edeef0; font-family: sans-serif; margin: 0; padding: 0; }
+        header { background-color: #ffffff; height: 50px; border-bottom: 1px solid #dce1e6; display: flex; align-items: center; padding: 0 20px; }
+        .logo { color: #0077ff; font-weight: bold; font-size: 20px; }
+        .container { width: 960px; margin: 20px auto; display: flex; }
+        aside { width: 200px; }
+        aside ul { list-style: none; padding: 0; }
+        aside li { padding: 8px; color: #2a5885; cursor: pointer; }
+        main { flex-grow: 1; background: white; padding: 20px; border-radius: 12px; border: 1px solid #dce1e6; }
+        .avatar { width: 100px; height: 100px; background: #cbd3de; border-radius: 50%; margin-bottom: 15px; }
+        h1 { font-size: 20px; margin: 0 0 10px 0; }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="logo">ВКонтакте</div>
+    </header>
+
+    <!-- Главная часть -->
+    <div class="container">
+        
+        <!-- Левое меню -->
+        <aside>
+            <ul>
+                <li><b>Моя Страница</b></li>
+                <li>Новости</li>
+                <li>Мессенджер</li>
+                <li>Друзья</li>
+            </ul>
+        </aside>
+
+        <!-- Личная страница -->
+        <main>
+            <div class="avatar"></div>
+            <h1>Иван Иванов (Это я!)</h1>
+            <p>Статус: Делаю лабу по веб-технологиям...</p>
+            <hr>
+            <h3>Моя стена</h3>
+            <p>Здесь будут мои посты.</p>
+        </main>
+
+    </div>
+
+</body>
+</html>
