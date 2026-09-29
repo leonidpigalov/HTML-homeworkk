@@ -1,0 +1,168 @@
+/* Общие стили и сброс отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #edeef0; /* Фирменный серый фон ВК */
+    color: #000;
+    padding-top: 60px;
+}
+
+/* Шапка */
+.vk-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dce1e6;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.header-container {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #0077ff; /* Синий цвет ВК */
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.search-bar {
+    background-color: #edeef0;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    width: 230px;
+    outline: none;
+}
+
+/* Сетка интерфейса */
+.main-container {
+    width: 960px;
+    margin: 15px auto 0 auto;
+    display: flex;
+}
+
+/* Левое меню */
+.sidebar {
+    width: 180px;
+    margin-right: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 6px 8px;
+    border-radius: 6px;
+    margin-bottom: 2px;
+}
+
+.sidebar li:hover {
+    background-color: #e5ebf1;
+}
+
+.sidebar li.active {
+    background-color: #e5ebf1;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #2a5885;
+    font-size: 14px;
+}
+
+/* Контентная зона */
+.feed {
+    flex-grow: 1;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dce1e6;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 15px;
+}
+
+/* Создание поста */
+.create-post {
+    display: flex;
+    gap: 10px;
+}
+
+.create-post input {
+    flex-grow: 1;
+    border: 1px solid #dce1e6;
+    border-radius: 8px;
+    padding: 8px 12px;
+    outline: none;
+    background-color: #f5f6f8;
+}
+
+.btn-post {
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Карточка поста */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.avatar-stub {
+    width: 40px;
+    height: 40px;
+    background-color: #cbd3de;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.post-info h4 {
+    font-size: 14px;
+    color: #2a5885;
+}
+
+.post-info span {
+    font-size: 12px;
+    color: #818c99;
+}
+
+.post-content {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.btn-like {
+    background: none;
+    border: none;
+    color: #818c99;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-like:hover {
+    color: #ff3347;
+}
