@@ -2,51 +2,87 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Моя страница ВК</title>
-    <style>
-        /* Это стили, чтобы сайт стал сине-серым, как ВК */
-        body { background-color: #edeef0; font-family: sans-serif; margin: 0; padding: 0; }
-        header { background-color: #ffffff; height: 50px; border-bottom: 1px solid #dce1e6; display: flex; align-items: center; padding: 0 20px; }
-        .logo { color: #0077ff; font-weight: bold; font-size: 20px; }
-        .container { width: 960px; margin: 20px auto; display: flex; }
-        aside { width: 200px; }
-        aside ul { list-style: none; padding: 0; }
-        aside li { padding: 8px; color: #2a5885; cursor: pointer; }
-        main { flex-grow: 1; background: white; padding: 20px; border-radius: 12px; border: 1px solid #dce1e6; }
-        .avatar { width: 100px; height: 100px; background: #cbd3de; border-radius: 50%; margin-bottom: 15px; }
-        h1 { font-size: 20px; margin: 0 0 10px 0; }
-    </style>
+    <title>Мой Мессенджер ВК</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Шапка сайта -->
+    <!-- Шапка -->
     <header>
         <div class="logo">ВКонтакте</div>
     </header>
 
-    <!-- Главная часть -->
+    <!-- Главный контейнер -->
     <div class="container">
         
         <!-- Левое меню -->
         <aside>
             <ul>
-                <li><b>Моя Страница</b></li>
+                <li>Моя Страница</li>
                 <li>Новости</li>
-                <li>Мессенджер</li>
+                <li class="active"><b>Мессенджер</b></li>
                 <li>Друзья</li>
             </ul>
         </aside>
 
-        <!-- Личная страница -->
-        <main>
-            <div class="avatar"></div>
-            <h1>Иван Иванов (Это я!)</h1>
-            <p>Статус: Делаю лабу по веб-технологиям...</p>
-            <hr>
-            <h3>Моя стена</h3>
-            <p>Здесь будут мои посты.</p>
-        </main>
+        <!-- Главный блок мессенджера -->
+        <main class="messenger-box">
+            
+            <!-- Левая колонка: Список чатов (диалогов) -->
+            <div class="chats-list">
+                <!-- Чат 1 -->
+                <div class="chat-item active-chat">
+                    <div class="chat-avatar"></div>
+                    <div class="chat-info">
+                        <div class="chat-name">Алексей Петров</div>
+                        <div class="chat-preview">Привет! Ты сделал лабораторную?...</div>
+                    </div>
+                </div>
+                <!-- Чат 2 -->
+                <div class="chat-item">
+                    <div class="chat-avatar"></div>
+                    <div class="chat-info">
+                        <div class="chat-name">Мария Сидорова</div>
+                        <div class="chat-preview">Скинь фотку конспекта, плиз!</div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Правая колонка: Окно самой переписки -->
+            <div class="chat-window">
+                
+                <!-- Шапка чата с кем общаемся -->
+                <div class="chat-window-header">
+                    <strong>Алексей Петров</strong>
+                </div>
+
+                <!-- Область с сообщениями -->
+                <div class="messages-area">
+                    <!-- Входящее сообщение -->
+                    <div class="message incoming">
+                        <div class="msg-avatar"></div>
+                        <div class="msg-text-bubble">
+                            Привет! Ты сделал лабораторную по веб-технологиям?
+                        </div>
+                    </div>
+
+                    <!-- Исходящее сообщение -->
+                    <div class="message outgoing">
+                        <div class="msg-text-bubble">
+                            Привет) Да, прямо сейчас заливаю файлы на GitHub!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Нижняя панель ввода сообщения -->
+                <div class="message-input-panel">
+                    <input type="text" placeholder="Напишите сообщение...">
+                    <button class="btn-send">Отправить</button>
+                </div>
+
+            </div>
+
+        </main>
     </div>
 
 </body>
